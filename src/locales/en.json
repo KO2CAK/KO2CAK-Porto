@@ -10,7 +10,12 @@
   "hero": {
     "greeting": "Hi, I'm",
     "role_prefix": "I am a",
-    "roles": ["Frontend Developer", "Naval Architect", "React Specialist", "Marine Surveyor", "Web Developer"],
+    "roles": [
+      "Frontend Developer",
+      "Naval Architect",
+      "React Specialist",
+      "Marine Surveyor"
+    ],
     "cta_cv": "Download CV",
     "cta_contact": "Contact Me"
   },

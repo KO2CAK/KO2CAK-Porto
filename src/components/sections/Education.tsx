@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { motion } from "framer-motion"
-import { GraduationCap, Award, BookOpen } from "lucide-react"
+import { Award, BookOpen } from "lucide-react"
+import logoITK from "@/assets/Logo_ITK.png"
 
 export function Education() {
   const { t } = useTranslation()
@@ -18,9 +19,10 @@ export function Education() {
             viewport={{ once: true }}
             className="bg-background p-10 rounded-3xl shadow-xl border relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 p-6 opacity-10">
-              <GraduationCap className="h-32 w-32" />
+            <div className="absolute top-0 right-0 p-6 opacity-20">
+              <img src={logoITK} alt="ITK Logo" className="h-24 w-24 object-contain" />
             </div>
+
             
             <div className="flex items-center gap-4 mb-8 text-maritime-ocean">
               <BookOpen className="h-8 w-8" />
