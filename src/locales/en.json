@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role_prefix": "I am a",
+    "roles": ["Frontend Developer", "Naval Architect", "React Specialist", "Marine Surveyor", "Web Developer"],
+    "cta_cv": "Download CV",
+    "cta_contact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "content": "Dedicated Naval Architecture graduate with 3+ years of experience in marine surveying, quality control, and project supervision in the petroleum, welding, and maritime industries. Skilled in inspections, report creation, non-destructive testing, and technical software. Proven ability to manage projects from start to end, including docking surveys, repair planning, and QC witnessing."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "freelance_surveyor": {
+      "role": "Surveyor (Freelance)",
+      "company": "PT Mega Ocean Jaya Balikpapan",
+      "period": "September 2024 – December 2024",
+      "desc": [
+        "Supervised sailboat project activities",
+        "Created activity report documents",
+        "Monitored fuel and fresh water usage"
+      ]
+    },
+    "qc_assistant": {
+      "role": "QC Assistant",
+      "company": "PT Kokoh Semesta RDMP JO Project, Kilang Pertamina Balikpapan",
+      "period": "March 2023 – June 2024",
+      "desc": [
+        "Conducted general inspection/survey of welded products",
+        "Maintained records of welded pipes",
+        "Prepared NDE requests for Penetrant Test and Radiographic Test by subcontractors"
+      ]
+    },
+    "pimpro": {
+      "role": "Pimpro",
+      "company": "PT Candi Pasifik",
+      "period": "June 2021 – June 2022",
+      "desc": [
+        "Managed and supervised projects from start to end",
+        "Joined class surveys for intermediate/special surveys post-docking",
+        "Performed close-up surveys in suspect areas witnessed by ownership",
+        "Created repair lists, dismantling plans, weight estimates, and material matching",
+        "Generated daily reports, prepared tools for QC testing, and created docking reports"
+      ]
+    },
+    "marine_surveyor_freelance": {
+      "role": "Marine Surveyor (Freelance)",
+      "company": "PT Citra Surveyor Indonesia",
+      "period": "August 2022 – November 2022",
+      "desc": [
+        "Performed general inspections/surveys of petroleum products for vessel discharge/loading and shore tanks",
+        "Created survey documents"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "technical": "Technical Skills"
+  },
+  "education": {
+    "title": "Education",
+    "itk": {
+      "degree": "Bachelor of Naval Architecture",
+      "period": "2016 - 2020",
+      "gpa": "GPA: 3.30"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "whatsapp": "Chat on WhatsApp"
+  }
+}

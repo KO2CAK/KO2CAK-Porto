@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "skills": "Keahlian",
+    "education": "Pendidikan",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, Saya",
+    "role_prefix": "Saya seorang",
+    "roles": ["Frontend Developer", "Naval Architect", "Spesialis React", "Marine Surveyor", "Web Developer"],
+    "cta_cv": "Unduh CV",
+    "cta_contact": "Hubungi Saya"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "content": "Lulusan Teknik Perkapalan yang berdedikasi dengan pengalaman 3+ tahun dalam marine surveying, quality control, dan supervisi proyek di industri perminyakan, pengelasan, dan maritim. Terampil dalam inspeksi, pembuatan laporan, non-destructive testing, dan software teknis. Memiliki kemampuan terbukti dalam mengelola proyek dari awal hingga akhir, termasuk survei docking, perencanaan perbaikan, dan saksi QC."
+  },
+  "experience": {
+    "title": "Pengalaman Profesional",
+    "freelance_surveyor": {
+      "role": "Surveyor (Freelance)",
+      "company": "PT Mega Ocean Jaya Balikpapan",
+      "period": "September 2024 – Desember 2024",
+      "desc": [
+        "Mengawasi aktivitas proyek kapal layar",
+        "Membuat dokumen laporan aktivitas",
+        "Memantau penggunaan bahan bakar dan air bersih"
+      ]
+    },
+    "qc_assistant": {
+      "role": "QC Assistant",
+      "company": "PT Kokoh Semesta RDMP JO Project, Kilang Pertamina Balikpapan",
+      "period": "Maret 2023 – Juni 2024",
+      "desc": [
+        "Melakukan inspeksi/survei umum pada produk las",
+        "Memelihara catatan pipa yang dilas",
+        "Menyiapkan permintaan NDE untuk Penetrant Test dan Radiographic Test oleh subkontraktor"
+      ]
+    },
+    "pimpro": {
+      "role": "Pimpro",
+      "company": "PT Candi Pasifik",
+      "period": "Juni 2021 – Juni 2022",
+      "desc": [
+        "Mengelola dan mengawasi proyek dari awal hingga akhir",
+        "Bergabung dalam survei kelas untuk survei intermediate/spesial pasca-docking",
+        "Melakukan survei close-up di area yang dicurigai yang disaksikan oleh pemilik",
+        "Membuat daftar perbaikan, rencana pembongkaran, estimasi berat, dan pencocokan material",
+        "Menghasilkan laporan harian, menyiapkan alat untuk pengujian QC, dan membuat laporan docking"
+      ]
+    },
+    "marine_surveyor_freelance": {
+      "role": "Marine Surveyor (Freelance)",
+      "company": "PT Citra Surveyor Indonesia",
+      "period": "Agustus 2022 – November 2022",
+      "desc": [
+        "Melakukan inspeksi/survei umum produk perminyakan untuk bongkar muat kapal dan tangki darat",
+        "Membuat dokumen survei"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Keahlian & Keahlian",
+    "technical": "Keahlian Teknis"
+  },
+  "education": {
+    "title": "Pendidikan",
+    "itk": {
+      "degree": "Sarjana Teknik Perkapalan",
+      "period": "2016 - 2020",
+      "gpa": "IPK: 3.30"
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "send": "Kirim Pesan",
+    "whatsapp": "Chat di WhatsApp"
+  }
+}
