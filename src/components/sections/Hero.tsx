@@ -66,7 +66,7 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-maritime-ocean hover:bg-maritime-ocean/90 text-white min-w-[200px]" asChild>
-              <a href="/CV_KOKO_YOGA_ADHITYA.pdf" target="_blank" rel="noopener noreferrer">{t("hero.cta_cv")}</a>
+              <a href="src\assets\CV_KOKO_YOGA_ADHITYA.pdf" target="_blank" rel="noopener noreferrer">{t("hero.cta_cv")}</a>
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 backdrop-blur-sm min-w-[200px]" asChild>
               <a href="#contact">{t("hero.cta_contact")}</a>
