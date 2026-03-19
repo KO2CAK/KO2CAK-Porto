@@ -58,7 +58,7 @@ export function Skills() {
           <p className="text-muted-foreground text-lg">{t("skills.technical")}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
           {skillGroups.map((group, gIndex) => (
             <motion.div
               key={group.title}
@@ -67,12 +67,12 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: gIndex * 0.1 }}
             >
-              <div className="glass-card h-full flex flex-col p-8 border border-white/5 hover:border-accent/40">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 bg-accent/10 rounded-2xl shadow-inner border border-accent/20 text-accent">
+              <div className="glass-card h-full flex flex-col p-6 sm:p-8 border border-white/5 hover:border-accent/40">
+                  <div className="flex items-center gap-4 mb-6 sm:mb-8">
+                    <div className="p-3 sm:p-4 bg-accent/10 rounded-2xl shadow-inner border border-accent/20 text-accent">
                       {group.icon}
                     </div>
-                    <h3 className="text-2xl font-bold">{group.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold">{group.title}</h3>
                   </div>
 
                   <div className="space-y-6 flex-1">

@@ -143,7 +143,7 @@ export function Experience() {
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Left Side: Tabs */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-4">
+          <div className="w-full lg:w-1/3 flex flex-col gap-3 sm:gap-4 mb-4 lg:mb-0">
             {workExp.map((exp, index) => {
               const isActive = activeTab === index
               return (
@@ -151,7 +151,7 @@ export function Experience() {
                   key={exp.id}
                   onClick={() => setActiveTab(index)}
                   className={cn(
-                    "text-left p-6 rounded-2xl transition-all duration-300 relative overflow-hidden border",
+                    "text-left p-4 sm:p-6 rounded-2xl transition-all duration-300 relative overflow-hidden border",
                     isActive
                       ? "glass pointer-events-none border-accent/50 shadow-[0_0_30px_rgba(14,165,233,0.15)] scale-[1.02]"
                       : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/20 cursor-pointer hover:scale-[1.01]"
@@ -194,27 +194,27 @@ export function Experience() {
                   className="flex flex-col h-full"
                 >
                   {/* Company Image Slider */}
-                  <div className="h-64 md:h-80 overflow-hidden rounded-t-2xl relative shrink-0">
+                  <div className="h-56 sm:h-64 md:h-80 overflow-hidden rounded-t-2xl relative shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
                     <ImageSlider images={activeExp.images} />
 
                     {/* Floating Title over Slider */}
-                    <div className="absolute bottom-6 left-6 md:left-8 right-6 z-20">
-                      <div className="flex items-center gap-2 text-accent mb-3">
-                        <div className="p-1.5 bg-accent/20 rounded-md backdrop-blur-sm border border-accent/30">
-                          <Briefcase className="h-4 w-4" />
+                    <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 md:left-8 right-4 sm:right-6 z-20">
+                      <div className="flex items-center gap-2 text-accent mb-2 sm:mb-3">
+                        <div className="p-1 sm:p-1.5 bg-accent/20 rounded-md backdrop-blur-sm border border-accent/30">
+                          <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
                         </div>
-                        <span className="text-sm font-bold tracking-widest uppercase bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-white">
+                        <span className="text-[10px] sm:text-sm font-bold tracking-widest uppercase bg-black/40 backdrop-blur-md px-2 sm:px-3 py-1 rounded-full border border-white/10 text-white">
                           {t(`experience.${activeExp.key}.role`)}
                         </span>
                       </div>
-                      <h3 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg">
+                      <h3 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg line-clamp-2">
                         {t(`experience.${activeExp.key}.company`)}
                       </h3>
                     </div>
                   </div>
 
-                  <div className="p-6 md:p-8 flex-1 bg-gradient-to-b from-background/50 to-transparent dark:from-white/5">
+                  <div className="p-5 sm:p-6 md:p-8 flex-1 bg-gradient-to-b from-background/50 to-transparent dark:from-white/5">
                     <h4 className="text-lg font-bold mb-6 text-foreground/90 flex items-center gap-2">
                       <span className="w-8 h-1 bg-accent rounded-full inline-block"></span>
                       Key Responsibilities

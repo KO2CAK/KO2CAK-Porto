@@ -62,14 +62,14 @@ export function About() {
             </div>
 
 
-            <div className="grid grid-cols-2 gap-6 mt-10">
-              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center">
-                <h3 className="text-4xl font-bold text-accent mb-2">3+</h3>
-                <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Years Experience</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-10">
+              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center p-6">
+                <h3 className="text-3xl sm:text-4xl font-bold text-accent mb-2">3+</h3>
+                <p className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-widest">Years Experience</p>
               </motion.div>
-              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center">
-                <h3 className="text-4xl font-bold text-accent mb-2">10+</h3>
-                <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Projects Managed</p>
+              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center p-6">
+                <h3 className="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</h3>
+                <p className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-widest">Projects Managed</p>
               </motion.div>
             </div>
           </motion.div>

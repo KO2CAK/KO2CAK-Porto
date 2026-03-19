@@ -61,17 +61,17 @@ export function Hero() {
           <motion.h1 
             variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 }}}
             transition={{ type: "spring", stiffness: 100 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-accent mb-6 drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-accent mb-6 drop-shadow-lg"
           >
             Koko Yoga Adhitya
           </motion.h1>
 
           <motion.div 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 }}}
-            className="text-xl md:text-3xl text-gray-200 mb-10 min-h-[4rem] flex flex-col sm:flex-row justify-center items-center gap-x-3 glass px-8 py-4 rounded-full"
+            className="text-lg md:text-3xl text-gray-200 mb-10 min-h-[4rem] flex flex-col sm:flex-row justify-center items-center gap-x-3 glass px-6 sm:px-8 py-4 rounded-3xl sm:rounded-full"
           >
             <span className="opacity-90">{t("hero.role_prefix")}</span>
-            <span className="text-accent font-bold drop-shadow-md">
+            <span className="text-accent font-bold drop-shadow-md text-center sm:text-left">
               <TypeAnimation
                 sequence={typeSequence}
                 wrapper="span"
