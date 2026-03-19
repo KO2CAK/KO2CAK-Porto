@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
-import { Briefcase, Calendar, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react"
+import { Briefcase, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 // Company Images - Kokoh Semesta
@@ -61,16 +61,16 @@ function ImageSlider({ images }: { images: string[] }) {
           className="w-full h-full object-cover"
         />
       </AnimatePresence>
-      
+
       {/* Controls */}
       <div className="absolute inset-0 flex items-center justify-between p-2 opacity-0 group-hover/slider:opacity-100 transition-opacity">
-        <button 
+        <button
           onClick={prev}
           className="p-1 rounded-full bg-black/40 text-white hover:bg-black/60 backdrop-blur-sm transition-colors"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
-        <button 
+        <button
           onClick={next}
           className="p-1 rounded-full bg-black/40 text-white hover:bg-black/60 backdrop-blur-sm transition-colors"
         >
@@ -81,8 +81,8 @@ function ImageSlider({ images }: { images: string[] }) {
       {/* Indicators */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
         {images.map((_, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className={cn(
               "w-1.5 h-1.5 rounded-full transition-all duration-300",
               i === currentIndex ? "bg-white w-3" : "bg-white/40"
@@ -152,15 +152,15 @@ export function Experience() {
                   onClick={() => setActiveTab(index)}
                   className={cn(
                     "text-left p-6 rounded-2xl transition-all duration-300 relative overflow-hidden border",
-                    isActive 
-                      ? "glass pointer-events-none border-accent/50 shadow-[0_0_30px_rgba(14,165,233,0.15)] scale-[1.02]" 
+                    isActive
+                      ? "glass pointer-events-none border-accent/50 shadow-[0_0_30px_rgba(14,165,233,0.15)] scale-[1.02]"
                       : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/20 cursor-pointer hover:scale-[1.01]"
                   )}
                 >
                   {isActive && (
-                    <motion.div 
-                      layoutId="activeTabIndicator" 
-                      className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent" 
+                    <motion.div
+                      layoutId="activeTabIndicator"
+                      className="absolute left-0 top-0 bottom-0 w-1.5 bg-accent"
                       initial={false}
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
@@ -197,16 +197,16 @@ export function Experience() {
                   <div className="h-64 md:h-80 overflow-hidden rounded-t-2xl relative shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
                     <ImageSlider images={activeExp.images} />
-                    
+
                     {/* Floating Title over Slider */}
                     <div className="absolute bottom-6 left-6 md:left-8 right-6 z-20">
                       <div className="flex items-center gap-2 text-accent mb-3">
-                         <div className="p-1.5 bg-accent/20 rounded-md backdrop-blur-sm border border-accent/30">
-                           <Briefcase className="h-4 w-4" />
-                         </div>
-                         <span className="text-sm font-bold tracking-widest uppercase bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-white">
-                           {t(`experience.${activeExp.key}.role`)}
-                         </span>
+                        <div className="p-1.5 bg-accent/20 rounded-md backdrop-blur-sm border border-accent/30">
+                          <Briefcase className="h-4 w-4" />
+                        </div>
+                        <span className="text-sm font-bold tracking-widest uppercase bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-white">
+                          {t(`experience.${activeExp.key}.role`)}
+                        </span>
                       </div>
                       <h3 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg">
                         {t(`experience.${activeExp.key}.company`)}
@@ -221,8 +221,8 @@ export function Experience() {
                     </h4>
                     <ul className="space-y-4">
                       {(t(`experience.${activeExp.key}.desc`, { returnObjects: true }) as string[]).map((item, i) => (
-                        <motion.li 
-                          key={i} 
+                        <motion.li
+                          key={i}
                           initial={{ opacity: 0, x: 20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.1 + (i * 0.05) }}
