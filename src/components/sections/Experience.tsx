@@ -127,13 +127,16 @@ export function Experience() {
 
 
   return (
-    <section id="experience" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-24 relative overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute top-1/4 left-0 w-full h-[500px] bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl pointer-events-none -z-10" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4 border-maritime-ocean text-maritime-ocean px-4 py-1">
+          <Badge variant="outline" className="mb-4 border-accent text-accent px-4 py-1 text-sm tracking-wider uppercase bg-accent/10">
             {t("nav.experience")}
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">{t("experience.title")}</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">{t("experience.title")}</h2>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
@@ -156,44 +159,46 @@ export function Experience() {
                   )}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-6 md:left-1/2 top-0 md:top-8 w-10 h-10 bg-background border-4 border-maritime-ocean rounded-full -translate-x-1/2 z-10 flex items-center justify-center">
-
-                    <Briefcase className="h-4 w-4 text-maritime-ocean" />
-                  </div>
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: 15 }}
+                    className="absolute left-6 md:left-1/2 top-0 md:top-8 w-12 h-12 glass border-2 border-accent rounded-full -translate-x-1/2 z-10 flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.5)]"
+                  >
+                    <Briefcase className="h-5 w-5 text-accent drop-shadow-md" />
+                  </motion.div>
 
                   {/* Content Card */}
                   <div className={cn(
-                    "w-full md:w-1/2 pl-12 md:pl-0",
-                    isEven ? "md:pr-16" : "md:pl-16"
+                    "w-full md:w-1/2 pl-14 md:pl-0",
+                    isEven ? "md:pr-20" : "md:pl-20"
                   )}>
-                    <div className="bg-background rounded-2xl overflow-hidden shadow-xl border border-border/50 hover:border-maritime-ocean transition-colors group">
+                    <div className="glass-card group overflow-hidden p-0 border border-white/10 hover:border-accent/50">
                       {/* Company Image Slider */}
-                      <div className="h-48 md:h-64 overflow-hidden">
+                      <div className="h-48 md:h-64 overflow-hidden rounded-t-2xl relative">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 pointer-events-none" />
                         <ImageSlider images={exp.images} />
                       </div>
 
-                      
-                      <div className="p-6 md:p-8">
+                      <div className="p-6 md:p-8 relative z-20">
                         <div className="flex flex-col mb-4">
-                          <span className="text-sm font-bold text-maritime-ocean mb-1 uppercase tracking-wider">
+                          <span className="text-xs font-bold text-accent mb-2 uppercase tracking-widest bg-accent/10 w-fit px-3 py-1 rounded-full">
                             {t(`experience.${exp.key}.company`)}
                           </span>
-                          <h3 className="text-xl font-bold group-hover:text-maritime-ocean transition-colors">
+                          <h3 className="text-2xl font-bold group-hover:text-accent transition-colors duration-300">
                             {t(`experience.${exp.key}.role`)}
                           </h3>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 mb-6 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
+                        <div className="flex flex-wrap gap-4 mb-6 text-sm text-foreground/70">
+                          <div className="flex items-center gap-2 bg-white/5 rounded-full px-3 py-1 border border-white/5">
+                            <Calendar className="h-4 w-4 text-accent" />
                             <span>{t(`experience.${exp.key}.period`)}</span>
                           </div>
                         </div>
 
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {(t(`experience.${exp.key}.desc`, { returnObjects: true }) as string[]).map((item, i) => (
-                            <li key={i} className="flex gap-3 text-muted-foreground leading-relaxed text-sm">
-                              <CheckCircle2 className="h-5 w-5 text-maritime-ocean shrink-0" />
+                            <li key={i} className="flex gap-3 text-foreground/80 leading-relaxed text-sm md:text-base">
+                              <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
                               <span>{item}</span>
                             </li>
                           ))}

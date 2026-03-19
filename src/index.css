@@ -10,9 +10,9 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 224 64% 33%; /* Navy Blue */
+    --primary: 224 76% 48%; /* Brighter Modern Blue */
     --primary-foreground: 210 40% 98%;
-    --secondary: 215 14% 46%; /* Steel Gray */
+    --secondary: 215 14% 46%;
     --secondary-foreground: 210 40% 98%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -22,24 +22,24 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 224 64% 33%;
-    --radius: 0.5rem;
+    --ring: 224 76% 48%;
+    --radius: 0.75rem; /* Slightly larger border radius for modern feel */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 224 71% 4%; /* Deeper, richer dark background */
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 222.2 84% 6%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    --popover: 222.2 84% 6%;
     --popover-foreground: 210 40% 98%;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 215 14% 46%;
+    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 199 89% 48%;
+    --accent: 199 89% 55%; /* Brighter teal for high contrast */
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -56,6 +56,23 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
 }
 
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 dark:bg-black/30 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+  .glass-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] hover:-translate-y-1;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-emerald-400;
+  }
+  .bg-gradient-mesh {
+    background: radial-gradient(at 40% 20%, hsla(224,76%,48%,0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(199,89%,48%,0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(224,76%,48%,0.1) 0px, transparent 50%);
+  }
+}

@@ -18,17 +18,20 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden border-8 border-background shadow-2xl">
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              className="relative z-10 rounded-2xl overflow-hidden glass p-2 shadow-2xl"
+            >
               <img
                 src={profilePic}
                 alt="Koko Yoga Adhitya"
-                className="w-full aspect-square object-cover"
+                className="w-full aspect-square object-cover rounded-xl"
               />
-            </div>
+            </motion.div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-maritime-ocean/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-maritime-navy/10 rounded-full blur-3xl" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/30 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
           </motion.div>
 
           <motion.div
@@ -38,13 +41,13 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2"
           >
-            <div className="flex items-center gap-3 text-maritime-ocean mb-4">
+            <div className="flex items-center gap-3 text-accent mb-4">
               <Layout className="h-6 w-6" />
-              <span className="font-bold tracking-wider uppercase">{t("about.title")}</span>
+              <span className="font-bold tracking-wider uppercase text-sm">{t("about.title")}</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              A Passionate <span className="text-maritime-ocean">Frontend Developer</span> Crafting Digital Experiences
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+              A Passionate <span className="text-gradient">Frontend Developer</span> Crafting Digital Experiences
             </h2>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
@@ -59,15 +62,15 @@ export function About() {
             </div>
 
 
-            <div className="grid grid-cols-2 gap-8 mt-10">
-              <div>
-                <h3 className="text-3xl font-bold text-primary">3+</h3>
-                <p className="text-sm text-muted-foreground uppercase tracking-widest mt-1">Years Experience</p>
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-primary">10+</h3>
-                <p className="text-sm text-muted-foreground uppercase tracking-widest mt-1">Projects Managed</p>
-              </div>
+            <div className="grid grid-cols-2 gap-6 mt-10">
+              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center">
+                <h3 className="text-4xl font-bold text-accent mb-2">3+</h3>
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Years Experience</p>
+              </motion.div>
+              <motion.div whileHover={{ y: -5 }} className="glass-card flex flex-col items-center justify-center text-center">
+                <h3 className="text-4xl font-bold text-accent mb-2">10+</h3>
+                <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">Projects Managed</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

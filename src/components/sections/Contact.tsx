@@ -4,15 +4,19 @@ import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
+
 
 export function Contact() {
   const { t } = useTranslation()
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">{t("contact.title")}</h2>
+    <section id="contact" className="py-24 relative overflow-hidden bg-background">
+      {/* Decorative gradient */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] pointer-events-none -z-10" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-16 text-center text-foreground">{t("contact.title")}</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
@@ -22,67 +26,68 @@ export function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="flex gap-6 items-start">
-              <div className="h-12 w-12 rounded-2xl bg-maritime-ocean/10 flex items-center justify-center shrink-0">
-                <Mail className="h-6 w-6 text-maritime-ocean" />
+            <motion.div whileHover={{ x: 5 }} className="flex gap-6 items-start glass p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+              <div className="h-14 w-14 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 shadow-inner border border-accent/20">
+                <Mail className="h-7 w-7 text-accent" />
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-1">{t("contact.email")}</h4>
-                <p className="text-muted-foreground">kokoyogaadhitya1997@gmail.com</p>
+                <h4 className="font-bold text-xl mb-1">{t("contact.email")}</h4>
+                <p className="text-foreground/70 font-medium">kokoyogaadhitya1997@gmail.com</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-6 items-start">
-              <div className="h-12 w-12 rounded-2xl bg-maritime-ocean/10 flex items-center justify-center shrink-0">
-                <Phone className="h-6 w-6 text-maritime-ocean" />
+            <motion.div whileHover={{ x: 5 }} className="flex gap-6 items-start glass p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+              <div className="h-14 w-14 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 shadow-inner border border-accent/20">
+                <Phone className="h-7 w-7 text-accent" />
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-1">WhatsApp</h4>
-                <p className="text-muted-foreground">+62895408434433</p>
+                <h4 className="font-bold text-xl mb-1">WhatsApp</h4>
+                <p className="text-foreground/70 font-medium">+62895408434433</p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-6 items-start">
-              <div className="h-12 w-12 rounded-2xl bg-maritime-ocean/10 flex items-center justify-center shrink-0">
-                <MapPin className="h-6 w-6 text-maritime-ocean" />
+            <motion.div whileHover={{ x: 5 }} className="flex gap-6 items-start glass p-6 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+              <div className="h-14 w-14 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 shadow-inner border border-accent/20">
+                <MapPin className="h-7 w-7 text-accent" />
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-1">Address</h4>
-                <p className="text-muted-foreground">Perumahan BDS-1 Blok B.3 No.37</p>
+                <h4 className="font-bold text-xl mb-1">Address</h4>
+                <p className="text-foreground/70 font-medium">Perumahan BDS-1 Blok B.3 No.37</p>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Form */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <Card className="border-none shadow-2xl">
-              <CardContent className="p-8">
+            <div className="glass-card h-full border border-white/10 p-8 hover:border-accent/30 transition-colors">
                 <form action="https://formspree.io/f/xlgppqon" method="POST" className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">{t("contact.name")}</label>
-                      <Input type="text" name="name" placeholder="Your Name" required className="bg-muted/30 border-none px-4 py-6" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold tracking-wide text-foreground/90">{t("contact.name")}</label>
+                      <Input type="text" name="name" placeholder="Your Name" required className="bg-white/5 border border-white/10 px-4 py-6 rounded-xl focus-visible:ring-accent transition-all" />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">{t("contact.email")}</label>
-                      <Input type="email" name="email" placeholder="yourEmail@example.com" required className="bg-muted/30 border-none px-4 py-6" />
+                    <div className="space-y-3">
+                      <label className="text-sm font-semibold tracking-wide text-foreground/90">{t("contact.email")}</label>
+                      <Input type="email" name="email" placeholder="yourEmail@example.com" required className="bg-white/5 border border-white/10 px-4 py-6 rounded-xl focus-visible:ring-accent transition-all" />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">{t("contact.message")}</label>
-                    <Textarea name="message" placeholder="Type your message here..." required className="bg-muted/30 border-none p-4 min-h-[150px]" />
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold tracking-wide text-foreground/90">{t("contact.message")}</label>
+                    <Textarea name="message" placeholder="Type your message here..." required className="bg-white/5 border border-white/10 p-4 min-h-[160px] rounded-xl focus-visible:ring-accent transition-all resize-none" />
                   </div>
-                  <Button type="submit" className="w-full bg-maritime-ocean hover:bg-maritime-ocean/90 h-12 text-white font-bold">
-                    <Send className="h-4 w-4 mr-2" />
-                    {t("contact.send")}
-                  </Button>
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90 h-14 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all text-lg mt-4">
+                      <Send className="h-5 w-5 mr-3" />
+                      {t("contact.send")}
+                    </Button>
+                  </motion.div>
                 </form>
-              </CardContent>
-            </Card>
+            </div>
           </motion.div>
         </div>
       </div>
